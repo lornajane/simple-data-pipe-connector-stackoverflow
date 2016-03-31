@@ -1,14 +1,14 @@
 {
-  "name": "simple-data-pipe-connector-oauth-template",
+  "name": "simple-data-pipe-connector-stackoverflow",
   "version": "0.0.1",
-  "description": "Simple Data Pipe connector OAuth1.0 boilerplate.",
+  "description": "Simple Data Pipe connector for Stack Overflow",
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-oauth-template"
+    "url": "https://github.com/markwatsonatx/simple-data-pipe-connector-stackoverflow"
   },
   "simple_data_pipe": {
-    "name": "oauth_boilerplate",
+    "name": "stackoverflow",
     "service_dependencies": []
   },
   "keywords": [
@@ -27,11 +27,11 @@
     "util": "^0.10.3"
   },
   "author": {
-    "name": "ptitzler@us.ibm.com"
+    "name": "markwats@us.ibm.com"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-oauth-template/issues"
+    "url": "https://github.com/markwatsonatx/simple-data-pipe-connector-stackoverflow/issues"
   },
   "readmeFilename": "README.md"
 }
