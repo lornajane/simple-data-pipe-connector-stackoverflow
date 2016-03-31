@@ -22,6 +22,7 @@
     "fs": "0.0.2",
     "lodash": "^4.3.0",
     "passport-oauth": "https://github.com/jaredhanson/passport-oauth",
+    "passport-stackexchange": "https://github.com/geNAZt/passport-stackexchange",
     "path": "^0.12.7",
     "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git",
     "util": "^0.10.3"
