@@ -24,6 +24,7 @@
     "passport-oauth": "https://github.com/jaredhanson/passport-oauth",
     "passport-stackexchange": "https://github.com/geNAZt/passport-stackexchange",
     "path": "^0.12.7",
+    "request": "^2.69.0",
     "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git",
     "util": "^0.10.3"
   },
