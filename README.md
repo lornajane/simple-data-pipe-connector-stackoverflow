@@ -1,21 +1,47 @@
-> Hey there! So you want to build your own Simple Data Pipe connector? [Start here](https://github.com/ibm-cds-labs/simple-data-pipe-connector-template/wiki/How-to-build-a-Simple-Data-Pipe-connector-using-this-template).
+# Simple Data Pipe connector for Stack Overflow
 
-***
+This connector uses the [Stack Exchange API](https://api.stackexchange.com/) to fetch the newest Stack Overflow questions for a selected tag.
 
+The [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) is used to store the data in Cloudant. One JSON record is created for each question:
+                                                                                          
+##### Question record structure:
+```json
+{
+  "..." : "<cloudant document properties such as _id and _rev>",
+  "tags": [
+    "javascript",
+    "android",
+    "indexeddb",
+    "web-sql"
+  ],
+  "owner": {
+    "reputation": 1,
+    "user_id": XXXXXXX,
+    "user_type": "registered",
+    "profile_image": "https://www.gravatar.com/avatar/XXXXX",
+    "display_name": "user",
+    "link": "http://stackoverflow.com/users/XXXXXXX/user"
+  },
+  "is_answered": false,
+  "view_count": 10,
+  "answer_count": 2,
+  "score": 0,
+  "last_activity_date": 1460144445,
+  "creation_date": 1460138138,
+  "question_id": XXXXXXXX,
+  "link": "http://stackoverflow.com/questions/XXXXXXXX/is-it-possible-to-perform-database-operation-on-locally-stored-db-through-javasc",
+  "title": "Is it possible to perform database operation on locally stored DB through javascript (WebSQL or Indexeddb)",
+  "body": "<p>i am developing offline web app for android platform and i want to use offline database for it. Is there any way to connect to locally stored database through javascript...",
+  "pt_type": "android"
+}
+```
 
-# Simple Data Pipe OAuth sample connector 
-
-This [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector template illustrates how to 
-
-* define OAuth connectivity for a cloud data source,
-* load a static set of data sets (2016 election speeches) and
-* store the results in Cloudant.
+Need to load data from other sources? Check out the [connector repository](https://developer.ibm.com/clouddataservices/simple-data-pipe-connectors/).
 
 ### Pre-requisites
 
 ##### General 
- This sample connector illustrates how to implement OAuth connectvity for a cloud data source, such as [reddit](http://www.reddit.com).
- A valid reddit user id is required to create and run a Simple Data pipe that fetches a small data set for illustrative purposes. 
+ A valid Stack Exchange account is required to use this connector.
 
 ##### Deploy the Simple Data Pipe
 
@@ -23,40 +49,39 @@ This [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-
 
 ##### Services
 
-This connector does not require any additional Bluemix service.
+This connector does not require any additional Bluemix services.
 
-##### Install the Simple Data Pipe connector OAuth boilerplate
+
+##### Install the Simple Data Pipe connector for Stack Overflow
 
   When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the `package.json` file: 
 
-  > BETA ONLY
 ```
-"simple-data-pipe-connector-oauth-template": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-oauth-template.git#pp_validation"
+"simple-data-pipe-connector-stackoverflow": "git://github.com/ibm-cds-labs/simple-data-pipe-connector-stackoverflow.git"
 ```
 
 ##### Enable OAuth support and collect connectivity information
 
- You need to register the Simple Data Pipe application before you can use it to load data.
- 1. Open the [reddit](http.reddit.com) web page and log in.
- 2. Click **Preferences** and select the **apps** tab.
- 3. **Create another app...**
- 4. Assign an application **name** and enter an optional **description**.
- 5. As _redirect URL_ enter `https://<simple-data-...mybluemix.net>/auth/passport/callback`.
-   > Replace `<simple-data-...mybluemix.net>` with the fully qualified host name of your Simple Data Pipe application on Bluemix.
+ You need to register the Simple Data Pipe application before you can use this connector to load data.
+ 
+ * Go to the <a href="http://stackapps.com" target="_blank">Stack Apps home page</a>.
+ * Find and click the **Register an application** link. 
+ * In the form, set the _Application Name_ (ex. **Simple Data Pipe Connector**).
+ * Set the _Description_ (ex. **Simple Data Pipe Connector for Stack Overflow**).
+ * Set the _OAuth Domain_ to **mybluemix.net** if running on Bluemix, or 127.0.0.1:8082 if running locally (change port if necessary).
+ *. Set the _Application Website_ to the Bluemix route for your Simple Data Pipe app (ex. **ht<span>tps://</span>simple-data-pipe-stackoverflow.mybluemix.net/**), or of running locally to **ht<span>tps://</span>127.0.0.1:8082/**. (change port and protocol if necessary):  
+ * Click the **Register Your Application** button.
+ * After you have registered your application take note of the _Client Id_, _Client Secret_, and _Key_ as you will use this information to configure your Stack Overflow data pipes.
 
- 6. Click **create app**.
- 7. Copy the application id displayed under your application name (e.g. vv5ulJR3...20Q) and the secret (e.g. j60....CFSyAmSY).
-
-
-### Using the Simple Data Pipe OAuth sample connector 
+### Using the Simple Data Pipe connector for Runkeeper
 
 To configure and run a pipe
 
 1. Open the Simple Data Pipe web console.
 2. Select __Create A New Pipe__.
-3. Select __Sample OAuth Data Source__ for the __Type__ when creating a new pipe  
-4. In the _Connect_ page, enter the _application id_ and _secret_ from the reddit app preferences page. 
-5. Select the data set (or data sets) to be loaded.
+3. Select __Stack Overflow__ for the __Type__ when creating a new pipe.
+4. In the _Connect_ page, enter the _Client Id_, _Client Secret_, and _Key_ from your application on Stack Apps.
+5. Select the data set to be loaded.
 6. Schedule or run the data pipe now.
 
 #### License 
