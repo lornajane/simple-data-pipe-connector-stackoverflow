@@ -16,11 +16,11 @@ The [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk)
   ],
   "owner": {
     "reputation": 1,
-    "user_id": XXXXXXX,
+    "user_id": 1234567,
     "user_type": "registered",
-    "profile_image": "https://www.gravatar.com/avatar/XXXXX",
+    "profile_image": "https://www.gravatar.com/avatar/1234567",
     "display_name": "user",
-    "link": "http://stackoverflow.com/users/XXXXXXX/user"
+    "link": "http://stackoverflow.com/users/1234567/user"
   },
   "is_answered": false,
   "view_count": 10,
@@ -28,8 +28,8 @@ The [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk)
   "score": 0,
   "last_activity_date": 1460144445,
   "creation_date": 1460138138,
-  "question_id": XXXXXXXX,
-  "link": "http://stackoverflow.com/questions/XXXXXXXX/is-it-possible-to-perform-database-operation-on-locally-stored-db-through-javasc",
+  "question_id": 87653421,
+  "link": "http://stackoverflow.com/questions/87653421/is-it-possible-to-perform-database-operation-on-locally-stored-db-through-javasc",
   "title": "Is it possible to perform database operation on locally stored DB through javascript (WebSQL or Indexeddb)",
   "body": "<p>i am developing offline web app for android platform and i want to use offline database for it. Is there any way to connect to locally stored database through javascript...",
   "pt_type": "android"
