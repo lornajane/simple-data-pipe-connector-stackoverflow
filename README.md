@@ -68,7 +68,7 @@ This connector does not require any additional Bluemix services.
  * Find and click the **Register an application** link. 
  * In the form, set the _Application Name_ (ex. **Simple Data Pipe Connector**).
  * Set the _Description_ (ex. **Simple Data Pipe Connector for Stack Overflow**).
- * Set the _OAuth Domain_ to **mybluemix.net** if running on Bluemix, or 127.0.0.1:8082 if running locally (change port if necessary).
+ * Set the _OAuth Domain_ to **mybluemix.net** if running on Bluemix, or **127.0.0.1:8082** if running locally (change port if necessary).
  * Set the _Application Website_ to the Bluemix route for your Simple Data Pipe app (ex. **ht<span>tps://</span>simple-data-pipe-stackoverflow.mybluemix.net/**), or if running locally to **ht<span>tps://</span>127.0.0.1:8082/**. (change port and protocol if necessary):  
  * Click the **Register Your Application** button.
  * After you have registered your application take note of the _Client Id_, _Client Secret_, and _Key_ as you will use this information to configure your Stack Overflow data pipes.
