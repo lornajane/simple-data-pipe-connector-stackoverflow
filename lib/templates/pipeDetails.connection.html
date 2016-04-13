@@ -51,9 +51,9 @@
         <input type="text" class="input_text input_wide" name="clientSecret" id="clientSecret" required ng-model="selectedPipe.clientSecret" placeholder="{{selectedConnector.label}} Client Secret {{!pipeConnectionForm.clientSecret.$pristine && pipeConnectionForm.clientSecret.$invalid ? 'is required' : ''}}">
       </div>
 
-      <div class="form_field" ng-class="{'has-error':!pipeConnectionForm.clientKey.$pristine && pipeConnectionForm.clientKey.$invalid}">
-        <label for="clientKey" class="form_label">Key</label>
-        <input type="text" class="input_text input_wide" name="clientKey" id="clientKey" required ng-model="selectedPipe.clientKey" placeholder="{{selectedConnector.label}} Key {{!pipeConnectionForm.clientKey.$pristine && pipeConnectionForm.clientKey.$invalid ? 'is required' : ''}}">
+      <div class="form_field" ng-class="{'has-error':!pipeConnectionForm.stackoverflowKey.$pristine && pipeConnectionForm.stackoverflowKey.$invalid}">
+        <label for="stackoverflowKey" class="form_label">Key</label>
+        <input type="text" class="input_text input_wide" name="stackoverflowKey" id="stackoverflowKey" required ng-model="selectedPipe.stackoverflowKey" placeholder="{{selectedConnector.label}} Key {{!pipeConnectionForm.stackoverflowKey.$pristine && pipeConnectionForm.stackoverflowKey.$invalid ? 'is required' : ''}}">
       </div>
       
       <div class="button_group">

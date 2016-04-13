@@ -1,0 +1,33 @@
+<section class="layout_section theme_light">
+
+  <h1 class="type_heading" id="toc_0">
+    <mark class="type_mark">Filter data</mark>
+  </h1>
+  
+</section>
+
+<section class="layout_section">
+
+<p class="type_copy">
+	Pick the Stack Overflow tag you want to retrieve, or enter a comma separated list of tags manually.
+</p>
+
+<div class="form_standard">
+    <div class="form_field">
+        <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
+            <!-- Display data set information  --> 
+            <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.label || table.labelPlural || table.name}}</option>
+        </select>
+    </div>
+    <div class="form_field" ng-if="selectedPipe.selectedTableId == 'custom'">
+        <label for="custom_tags" class="form_label">Custom Tag</label>
+        <input type="text" class="input_text" name="customTags" id="custom_tags" required ng-model="selectedPipe.customTags" placeholder="cloudant,apache-spark">
+    </div>
+    <div class="form_field">
+        <input type="checkbox" name="downloadAnswers" id="download_answers" required ng-model="selectedPipe.downloadAnswers"> Download Answers
+    </div>
+</div>
+
+<page-button-bar connect="false" nextPageTab="scheduling"/>
+
+</section>
