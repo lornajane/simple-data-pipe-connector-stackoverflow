@@ -20,8 +20,18 @@
         </select>
     </div>
     <div class="form_field" ng-if="selectedPipe.selectedTableId == 'custom'">
-        <label for="custom_tags" class="form_label">Custom Tag</label>
+        <label for="custom_tags" class="form_label">Custom Tags (comma separated)</label>
         <input type="text" class="input_text" name="customTags" id="custom_tags" required ng-model="selectedPipe.customTags" placeholder="cloudant,apache-spark">
+    </div>
+    <div class="form_field">
+        <label for="custom_tags" class="form_label">Number of Questions per Tag</label>
+        <select class="input_select" id="questions_count" name="questionCount" ng-model="selectedPipe.questionCount">
+            <!-- Display data set information  -->
+            <option value="">100</option>
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+        </select>
     </div>
     <div class="form_field">
         <input type="checkbox" name="downloadAnswers" id="download_answers" required ng-model="selectedPipe.downloadAnswers"> Download Answers
