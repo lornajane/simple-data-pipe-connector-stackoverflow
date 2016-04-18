@@ -45,7 +45,7 @@ Need to load data from other sources? Check out the [connector repository](https
 
 ##### Deploy the Simple Data Pipe
 
- [Deploy the Simple Data Pipe in Bluemix](https://github.com/ibm-cds-labs/simple-data-pipe) using the Deploy to Bluemix button or manually.
+ [Deploy the Simple Data Pipe in Bluemix](https://github.com/ibm-cds-labs/simple-data-pipe) using the Deploy to Bluemix button or manually. Take note of the application route (e.g. simple-data-pipe-stackoverflow.mybluemix.net)
 
 ##### Services
 
@@ -57,16 +57,18 @@ This connector does not require any additional Bluemix services.
   When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the `package.json` file: 
 
 ```
-"simple-data-pipe-connector-stackoverflow": "git://github.com/ibm-cds-labs/simple-data-pipe-connector-stackoverflow.git"
+"simple-data-pipe-connector-stackoverflow": "git://github.com/ibm-cds-labs/simple-data-pipe-connector-stackoverflow.git",
 ```
 
 ##### Enable OAuth support and collect connectivity information
 
  You need to register the Simple Data Pipe application before you can use this connector to load data.
  
- * Go to the <a href="http://stackapps.com" target="_blank">Stack Apps home page</a>.
+ * Go to the <a href="http://stackapps.com" target="_blank">Stack Apps home page</a> and log in.
+  > If prompted, confirm that you want to create a new Stack Apps account. 
+
  * Find and click the **Register an application** link. 
- * In the form, set the _Application Name_ (ex. **Simple Data Pipe Connector**).
+ * In the form, set the _Application Name_ (ex. **Simple Data Pipe**).
  * Set the _Description_ (ex. **Simple Data Pipe Connector for Stack Overflow**).
  * Set the _OAuth Domain_ to **mybluemix.net** if running on Bluemix, or **127.0.0.1:8082** if running locally (change port if necessary).
  * Set the _Application Website_ to the Bluemix route for your Simple Data Pipe app (ex. **ht<span>tps://</span>simple-data-pipe-stackoverflow.mybluemix.net/**), or if running locally to **ht<span>tps://</span>127.0.0.1:8082/**. (change port and protocol if necessary):  
@@ -81,7 +83,7 @@ To configure and run a pipe
 2. Select __Create A New Pipe__.
 3. Select __Stack Overflow__ for the __Type__ when creating a new pipe.
 4. In the _Connect_ page, enter the _Client Id_, _Client Secret_, and _Key_ from your application on Stack Apps.
-5. Select the data set to be loaded.
+5. Select the data set to be loaded. Choose one of the most actively used tags or enter one or more comma separated custom tags.
 6. Schedule or run the data pipe now.
 
 #### License 
