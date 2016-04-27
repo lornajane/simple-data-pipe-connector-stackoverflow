@@ -25,7 +25,7 @@
     "passport-stackexchange": "https://github.com/geNAZt/passport-stackexchange",
     "path": "^0.12.7",
     "request": "^2.69.0",
-    "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git",
+    "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git#create-view-support-experimental",
     "util": "^0.10.3"
   },
   "author": {
