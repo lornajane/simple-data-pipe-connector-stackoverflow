@@ -18,7 +18,7 @@
     "data movement"
   ],
   "dependencies": {
-    "bluemix-helper-config": "^0.1.13",
+    "bluemix-helper-config": "^0.1.16",
     "fs": "0.0.2",
     "lodash": "^4.3.0",
     "passport-oauth": "https://github.com/jaredhanson/passport-oauth",
